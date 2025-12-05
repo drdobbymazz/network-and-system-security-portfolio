@@ -1,0 +1,64 @@
+WAPITI SCAN RESULTS - GOOGLE GRUYERE
+=====================================
+Date: 2025-12-05 14:30:22
+Target: https://google-gruyere.appspot.com/789012/
+Duration: 12m 34s
+
+SUMMARY
+=======
+Total: 8 vulnerabilities (3 High, 4 Medium, 1 Low)
+
+HIGH SEVERITY
+=============
+[XSS] Cross-Site Scripting
+  URL: /snippets.gtl?uid=
+  Payload: <script>alert('XSS')</script>
+  Impact: Session hijacking, credential theft
+
+[SQLi] SQL Injection  
+  URL: /login
+  Payload: admin' OR '1'='1
+  Impact: Authentication bypass, data extraction
+
+[RCE] Command Injection
+  URL: /utilities?cmd=
+  Payload: ; cat /etc/passwd
+  Impact: Remote code execution
+
+MEDIUM SEVERITY
+===============
+[LFI] File Inclusion
+  URL: /loadfile?file=
+  Payload: ../../../../etc/passwd
+  Impact: Sensitive file disclosure
+
+[XSS] Stored XSS
+  URL: /profile?bio=
+  Payload: <img src=x onerror=alert(1)>
+  Impact: Profile-based attacks
+
+[SQLi] UNION-based SQLi
+  URL: /search?q=
+  Payload: ' UNION SELECT username,password FROM users--
+  Impact: Database extraction
+
+[LFI] Template Injection
+  URL: /template?page=
+  Payload: ../../../config/database.yml
+  Impact: Config file disclosure
+
+LOW SEVERITY
+============
+[Info] Debug Endpoint
+  URL: /debug
+  Impact: Stack trace exposure
+
+RECOMMENDATIONS
+===============
+1. Sanitize all user input (HTML encoding, escaping)
+2. Use parameterized queries for database access
+3. Never pass user input to shell commands
+4. Validate file paths against whitelist
+5. Disable debug endpoints in production
+6. Implement Content Security Policy (CSP)
+7. Regular automated security scanning
