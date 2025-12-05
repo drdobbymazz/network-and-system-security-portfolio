@@ -27,7 +27,8 @@ networks-system-security-portfolio/
 ├── Week-04/ Malware Detection & Analysis
 ├── Week-05/ Web Application Security
 ├── Week-06/ Binary Analysis & Static Malware Analysis
-└── Week-07/ Penetration Testing Fundamentals
+├── Week-07/ Penetration Testing Fundamentals
+└── Week-09/ Generative AI Security
 ```
 
 Each week contains:
@@ -146,6 +147,23 @@ Explored reconnaissance and scanning phases of penetration testing. Implemented 
 
 **Key Skills**: Penetration testing, network reconnaissance, ethical hacking
 
+---
+
+### [Week 9: Generative AI Security](Week-09/)
+
+**Focus**: Security vulnerabilities in Large Language Models (LLMs)
+
+Deployed local language models using Ollama and conducted red-teaming exercises to identify AI-specific vulnerabilities. Tested prompt injection, data poisoning, model inversion, and extraction attacks across multiple model sizes.
+
+**Technical Implementation**:
+- Local LLM deployment with Ollama (smollm2, llama3.2, mistral)
+- Prompt injection testing (instruction override attempts)
+- Data poisoning simulation (introducing false information)
+- Model inversion attacks (extracting memorized data)
+- Model extraction simulation (systematic query collection)
+
+**Key Skills**: AI security, red-teaming, adversarial testing, emerging threat analysis
+
 **Important**: All testing conducted on authorized targets only (localhost, public domains, training platforms). Emphasized legal and ethical boundaries throughout.
 
 ---
@@ -219,11 +237,11 @@ By completing this portfolio, I have demonstrated:
 
 ### What Surprised Me
 
-The accessibility of security tools was unexpected. Building a port scanner, implementing encryption, or creating a malware detector isn't as complex as I initially thought - it's about understanding the principles and applying them systematically. This demystified "hacking" and showed it's methodical problem-solving rather than mysterious magic.
+The accessibility of security tools was unexpected. Building a port scanner, implementing encryption, or creating a malware detector isn't as complex as I initially thought, it's just about understanding the principles and applying them systematically. This demystified "hacking" and showed it's methodical problem-solving rather than mysterious magic.
 
 ### Most Valuable Skills Gained
 
-Practical cryptography implementation (Week 2) gave me confidence that I can build secure systems, not just understand them theoretically. Authentication security (Week 3) is universally applicable - every application needs secure login. Penetration testing methodology (Week 7) provided a systematic framework for thinking like an attacker, which paradoxically makes you a better defender.
+Practical cryptography implementation (Week 2) gave me confidence that I can build secure systems, not just understand them theoretically. Authentication security (Week 3) is universally applicable as every application needs secure login. Penetration testing methodology (Week 7) provided a systematic framework for thinking like an attacker, which paradoxically makes you a better defender.
 
 ### Connections Between Weeks
 
@@ -231,7 +249,7 @@ The portfolio builds progressively. Week 2's encryption protects data. Week 3's 
 
 ### Challenges Overcome
 
-Understanding why certain security measures exist (like bcrypt's intentional slowness) required shifting from "faster is better" to "appropriate for purpose." Balancing security with usability is a constant challenge that doesn't have perfect answers - it's about informed trade-offs.
+Understanding why certain security measures exist (like bcrypt's intentional slowness) required shifting from "faster is better" to "appropriate for purpose." Balancing security with usability is a constant challenge that doesn't have perfect answers, it's about informed trade-offs.
 
 ### Career Preparedness
 
