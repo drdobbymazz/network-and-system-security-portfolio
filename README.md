@@ -1,7 +1,8 @@
 # Networks And System Security Portfolio
-**Zoard's E-Portfolio for Networks And System Security Module**
+**Zohaib's E-Portfolio for Networks And System Security Module**
 
-**Student**: Zoard  
+**Student**: Zohaib Khokhar
+**Student Number**: 33828293
 **Institution**: Goldsmiths, University of London  
 **Module**: Networks And System Security  
 **Academic Year**: 2025-2026
